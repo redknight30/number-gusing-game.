@@ -1,0 +1,18 @@
+import random
+choice=''
+print (" welcome to the number guessing game")
+for count in range(100000**900000):
+    loaded_die=( 1, 2, 3, 4, 5, 6)
+    roll= random.choice(loaded_die)
+    choice = input('do you want to guess the number [Y/N]:')
+    if choice == 'N':
+        print("thank you for playing have a nice day :)")
+        break
+        choice = ' '
+    if choice == 'Y':
+        num=int(input("pick a number betwen 1-6:"))
+        print(roll)
+        if num==roll:
+            print("you got the right number :)")
+        else:
+            print ("sorry that is the wrong number")
