@@ -1,18 +1,20 @@
 import random
-choice=''
-print (" welcome to the number guessing game")
+life=10
+print ("hello this the number gusing game you have 10 tryes to guse the coret answer")
+roll=random.randint(1,1000)
 for count in range(100000**900000):
-    loaded_die=( 1, 2, 3, 4, 5, 6)
-    roll= random.choice(loaded_die)
-    choice = input('do you want to guess the number [Y/N]:')
-    if choice == 'N':
-        print("thank you for playing have a nice day :)")
-        break
-        choice = ' '
-    if choice == 'Y':
-        num=int(input("pick a number betwen 1-6:"))
-        print(roll)
-        if num==roll:
-            print("you got the right number :)")
-        else:
-            print ("sorry that is the wrong number")
+    num = int(input("what number do you think it is:"))
+    if num<roll:
+                print ("too low")
+                life-=1
+    elif num>roll:
+                print ("too hight")
+                life-=1
+    elif num==roll:
+                print("you won")
+                print (roll)
+                break
+    if life==0:
+                print("game over")
+                print (roll)
+                break
